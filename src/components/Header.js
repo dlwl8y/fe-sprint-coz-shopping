@@ -33,7 +33,8 @@ const TitleNameDiv = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-`
+`;
+
 const HeaderNav = styled.nav`
   display: flex;
   justify-content: center;
@@ -41,12 +42,14 @@ const HeaderNav = styled.nav`
   flex-direction: column;
   height: 100%;
   cursor: pointer;
-`
+`;
+
 const NavImg = styled.img`
   width: 30px;
   height: 20px;
   display: flex;
-`
+`;
+
 const DropdownUl = styled.ul`
   /* display: none; */
   position: absolute;
