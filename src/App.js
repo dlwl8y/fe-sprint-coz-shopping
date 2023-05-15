@@ -1,11 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import MainPage from './pages/MainPage';
+import ProductsListPage from './pages/ProductsListPage';
+import BookMarkPage from './pages/BookMarkPage';
+
 
 function App() {
   return (
-    <div className="App">
-      초기 세팅 완료
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={ <MainPage/> }/>
+        <Route path='/products/list' element={ <ProductsListPage/> }/>
+        <Route path='/bookmark' element={ <BookMarkPage/> }/>
+      </Routes>
+    </Router>
   );
 }
 
