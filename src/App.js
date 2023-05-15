@@ -1,11 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+
 
 function App() {
   return (
-    <div className="App">
-      초기 세팅 완료
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+
+      </Routes>
+    </Router>
   );
 }
 
