@@ -2,15 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const FooterFooter = styled.footer`
+const FooterContainer = styled.footer`
   width: 100vw;
   height: 58px;
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  /* position: sticky; */
   bottom: 0;
+  background-color: #FFFFFF;
 `;
 
 const FooterTextDiv = styled.div`
@@ -20,14 +21,14 @@ const FooterTextDiv = styled.div`
 
 function Footer() {
   return (
-    <FooterFooter>
+    <FooterContainer>
       <FooterTextDiv>
         개인정보 처리방침 | 이용 약관
       </FooterTextDiv>
       <FooterTextDiv>
         All rights reserved @ Codestates
       </FooterTextDiv>
-    </FooterFooter>
+    </FooterContainer>
   );
 }
 
