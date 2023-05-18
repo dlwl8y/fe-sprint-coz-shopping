@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
-import * as S from '../styled/Header.styled';
+import * as S from './Header.styled';
 
 
 function Header() {

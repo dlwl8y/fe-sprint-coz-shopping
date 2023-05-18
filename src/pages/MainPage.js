@@ -5,20 +5,29 @@ import fetchDataAction from '../reduxes/actions/fetchDataAction';
 import Item from '../components/Item';
 
 const Container = styled.div`
-  margin: 24px 76px;
+  display: flex;
+  justify-content: center;
   border: 5px solid red;
 `;
 
-// const Article = styled.article`
-//   display: flex;
-//   border: 5px solid black;
-//   flex-direction: column;
+const Article = styled.article`
+  margin: 24px 76px;
+  width: 1128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 5px solid black;
   
-//   > h2 {
-//     width: 100%;
-//   }
-// `;
+  > h2 {
+    width: 100%;
+    height: 38px;
+  }
+`;
 
+const ListContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 function MainPage() {
   const dispatch = useDispatch();
@@ -28,14 +37,18 @@ function MainPage() {
     fetchDataAction(dispatch);
   }, [dispatch])
 
-
   return (
     <Container>
-      <h2>상품 리스트</h2>
-      <Item data={productsList}></Item>
-      <h2>북마크 리스트</h2>
-      {console.log(productsList)}
-
+      <Article>
+        <ListContainer>
+        <h2>상품 리스트</h2>
+        {productsList.map((data, idx) => {
+          return <Item data={productsList} key={idx}></Item>
+        })}
+        <h2>북마크 리스트</h2>
+        {console.log(productsList)}
+        </ListContainer>
+      </Article>
     </Container>
   );
 }
